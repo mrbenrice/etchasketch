@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: #373e98;
+    color: white;
+}
+
+.headercontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-block: 5px;
+    margin-inline: 20px;
+}
+
+body {
+    margin-top: 50px;
+    display: flex;
+}
+
+.flexcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.grid {
+    width: 400px;
+    height: 400px;
+    display: grid;
+    border: 2px solid blue;
+}

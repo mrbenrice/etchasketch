@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="./style.css" rel="stylesheet">
+        <title>Etch-A-Sketch</title>
+    </head>
+    <header>
+        <div class="headercontainer">
+            <div class="etchasketchtitle">Etch-a-sketch!</div>
+            <div class="portfolio">Back to portfolio</div>
+        </div>
+    </header>
+    <body>
+        <div class="flexcontainer">
+            <div class="title"><h1>Sketchpad</h1></div>
+            <div class="content">
+                <div class="grid"></div>
+                <div class="buttons">
+                    <button onclick="changeColor('black')">Black</button>
+                    <button onclick="changeColor('white')">Eraser</button>
+                    <button onclick="changeColor('random')">Random</button>
+                    <button onclick="resetGrid()">Reset</button>
+                </div>
+                <div class="input">
+                    <input type="text" placeholder="Size of grid:" value="16" onchange="changeGridSize(this.value)">
+                    <button>Set size:</button>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="./eas.js"></script>
+</html>
