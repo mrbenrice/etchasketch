@@ -22,14 +22,28 @@ function setGridSize (cellSize) {
     cells.forEach((div) => div.remove());
     grid.style.gridTemplateColumns = `repeat(${cellSize}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${cellSize}, 1fr)`;
+    let gridlines = document.getElementById('gridlinescheckbox').checked;
 
-for (let i = 0; i < (cellSize * cellSize); i++) {
-    let cell = document.createElement('div');
-    cell.addEventListener('mousedown', colorCell)
-    cell.addEventListener('mouseover', colorCell)
-    cell.style.backgroundColor = 'white';
-    grid.insertAdjacentElement("beforeend", cell);
- }
+    if (gridlines == true) {
+        for (let i = 0; i < (cellSize * cellSize); i++) {
+            let cell = document.createElement('div');
+            cell.addEventListener('mousedown', colorCell)
+            cell.addEventListener('mouseover', colorCell)
+            cell.style.backgroundColor = 'white';
+            cell.style.border = '1px solid grey';
+            grid.insertAdjacentElement("beforeend", cell);
+         }
+    } else if (gridlines == false) {
+        for (let i = 0; i < (cellSize * cellSize); i++) {
+            let cell = document.createElement('div');
+            cell.addEventListener('mousedown', colorCell)
+            cell.addEventListener('mouseover', colorCell)
+            cell.style.backgroundColor = 'white';
+            grid.insertAdjacentElement("beforeend", cell);
+         }
+    }
+
+ addGridLines();
 }
 
 function changeGridSize (input) {
@@ -68,5 +82,3 @@ function resetGrid() {
     let cells = grid.querySelectorAll('div')
     cells.forEach((div) => div.style.backgroundColor = 'white');
 }
-
-let button = document.querySelectorAll('button')

@@ -40,9 +40,16 @@
                         <span style="--i:8">y</span>
                         <span style="--i:8">!</span>
                 <div class="grid"></div>
-                <div class="input">
-                    <input type="text" placeholder="Size of grid (2-64):" value="" onchange="changeGridSize(this.value)">
-                    <button>Set size:</button>
+                    </div>
+                <div class="inputs">
+                    <div class="input">
+                        <input type="text" placeholder="Size of grid (2-64):" value="" onchange="changeGridSize(this.value)">
+                        <button>Set size:</button>
+                    </div>
+                    <div class="gridlinesbox">
+                        <input type="checkbox" id="gridlinescheckbox" value="lines" onchange="location.reload();">
+                        <label for="gridlinescheckbox">Gridlines?</label>
+                    </div>
                 </div>
             </div>
         </div>
