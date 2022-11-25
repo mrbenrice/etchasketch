@@ -16,21 +16,41 @@
     </header>
     <body>
         <div class="flexcontainer">
-            <div class="title"><h1>Sketchpad</h1></div>
             <div class="content">
-                <div class="grid"></div>
                 <div class="buttons">
+                    <div class="colorpickerbuttons">
+                        <button id = 'colorbtn' onclick="changeColor('picker')">Colour <input id="colorPicker" type="color" value="#333333" /></button>     
+                    </div>
                     <button onclick="changeColor('black')">Black</button>
                     <button onclick="changeColor('white')">Eraser</button>
                     <button onclick="changeColor('random')">Random</button>
                     <button onclick="resetGrid()">Reset</button>
                 </div>
+            </div>
+                <div class="gridtitle">
+                    <div class="waviy">
+                        <span style="--i:1">E</span>
+                        <span style="--i:2">t</span>
+                        <span style="--i:3">c</span>
+                        <span style="--i:4">h</span>
+                        <span style="--i:4">&nbsp;</span>
+                        <span style="--i:5">A</span>
+                        <span style="--i:6">w</span>
+                        <span style="--i:7">a</span>
+                        <span style="--i:8">y</span>
+                        <span style="--i:8">!</span>
+                <div class="grid"></div>
                 <div class="input">
-                    <input type="text" placeholder="Size of grid:" value="16" onchange="changeGridSize(this.value)">
+                    <input type="text" placeholder="Size of grid (2-64):" value="" onchange="changeGridSize(this.value)">
                     <button>Set size:</button>
                 </div>
             </div>
         </div>
     </body>
+    <footer>
+        <div class="footercontainer">
+            <div class="copyright">&copy; Ben Rice Web Design</div>
+        </div>
+    </footer>
     <script src="./eas.js"></script>
 </html>

@@ -1,3 +1,11 @@
+let DEFAULTCOLOR = 'black';
+let DEFAULTSIZE = 16;
+
+window.onload = () => {
+    setGridSize(DEFAULTSIZE);
+    color = DEFAULTCOLOR;
+}
+
 let color = 'black';
 let mouseDown = false;
 document.body.onmousedown = () => (mouseDown = true);
@@ -24,8 +32,6 @@ for (let i = 0; i < (cellSize * cellSize); i++) {
  }
 }
 
-setGridSize(16);
-
 function changeGridSize (input) {
     if (input >= 2 && input <= 65)
     {
@@ -42,6 +48,10 @@ function colorCell() {
     if (color == 'random') {
         this.style.transition = '0.2s';
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+    } else if (color == 'picker') {
+        let colorPicker = document.querySelector('#colorPicker').value
+        this.style.transition = '0.2s';
+        this.style.backgroundColor = colorPicker;
     } else {
         this.style.transition = '0.2s';
         this.style.backgroundColor = color;
@@ -58,3 +68,5 @@ function resetGrid() {
     let cells = grid.querySelectorAll('div')
     cells.forEach((div) => div.style.backgroundColor = 'white');
 }
+
+let button = document.querySelectorAll('button')
